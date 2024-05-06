@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Log extends Model
 {
     use HasFactory;
-    protected $fillable = ['transaction_id','log','executor_id'];
+    protected $fillable = [
+        'transaction_id',
+        'log',
+        'executor_id',
+    ];
 }
