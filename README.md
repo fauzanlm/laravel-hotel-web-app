@@ -74,13 +74,14 @@ Generate AppKey
 Create a new database your-database-name
 Open .env on your code editor and set the .env database config
 
+```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=your-database-name
 DB_USERNAME=root
 DB_PASSWORD=
-
+```
 
 Migrate project to generate table
 
