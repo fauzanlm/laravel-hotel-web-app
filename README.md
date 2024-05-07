@@ -15,6 +15,17 @@ This comprehensive hotel web application, developed using the Laravel V8 framewo
 - **Payment Options**: Providing various convenient payment methods, such as credit cards, bank transfers, or cash payment upon arrival.
 - **Calendar Integration**: Users can add their reservation details to their digital calendars to keep track of their stay dates.
 
+## Screenshoots
+
+![image](https://github.com/fauzanlm/laravel-hotel-web-app/assets/70043864/c16b2bf9-5049-49a5-bb8c-9fff8a8b4a32)
+![image](https://github.com/fauzanlm/laravel-hotel-web-app/assets/70043864/6bc14de1-7dee-4bd5-a27d-9a26cecaf2f1)
+![image](https://github.com/fauzanlm/laravel-hotel-web-app/assets/70043864/0aadcb07-d116-4141-9b84-1b5345c8ca2a)
+![image](https://github.com/fauzanlm/laravel-hotel-web-app/assets/70043864/15bc6d78-f56c-4680-bea4-052b41dc6b39)
+![image](https://github.com/fauzanlm/laravel-hotel-web-app/assets/70043864/ecba58e9-69a2-46a5-83cf-917676f22853)
+![image](https://github.com/fauzanlm/laravel-hotel-web-app/assets/70043864/ce3b8c94-fe5f-443d-af86-12e417751069)
+![image](https://github.com/fauzanlm/laravel-hotel-web-app/assets/70043864/9c612d77-c27d-480d-8638-7bcb3752f45f)
+
+
 
 ## Tech Stack
 
@@ -59,7 +70,19 @@ Generate AppKey
 ```bash
   php artisan key:generate
 ```
-If you use MySQL, create a new database hotel-hebat (example) then migrate project to generate table
+
+Create a new database your-database-name
+Open .env on your code editor and set the .env database config
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your-database-name
+DB_USERNAME=root
+DB_PASSWORD=
+
+
+Migrate project to generate table
 
 ```bash
   php artisan migrate
