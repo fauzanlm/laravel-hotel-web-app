@@ -4,8 +4,8 @@
 
 **An intuitive, full-featured Hotel Management & Reservation System built on the Laravel framework.**
 
-[![Laravel](https://img.shields.io/badge/Laravel-8.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
-[![PHP](https://img.shields.io/badge/PHP-%5E7.3%20%7C%20%5E8.0-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
+[![Laravel](https://img.shields.io/badge/Laravel-10.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-%5E8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.1-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 [![CI Tests](https://img.shields.io/github/actions/workflow/status/fauzanlm/laravel-hotel-web-app/tests.yml?branch=main&label=CI%20Quality&style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/fauzanlm/laravel-hotel-web-app/actions)
@@ -197,7 +197,7 @@ erDiagram
 
 ## 💻 System Requirements
 
-- **PHP:** `>= 8.0` (compatible with PHP 8.0 and 8.1)
+- **PHP:** `>= 8.2` (compatible with PHP 8.2 and 8.3)
 - **Composer:** `>= 2.0`
 - **Node.js & NPM:** Node.js `>= 16.x` & NPM `>= 8.x`
 - **Database:** MySQL `>= 5.7` / MariaDB `>= 10.3` or SQLite `>= 3.8`
@@ -302,28 +302,28 @@ php artisan test
 
 ## 🏗️ Modernization & Upgrade Roadmap
 
-The project is currently running **Laravel 8.75**. To modernize the codebase towards **Laravel 10** or **Laravel 11**, the following breaking changes and dependency replacements should be applied:
+The project has been upgraded to **Laravel 10** (`v10.50.3`) running on **PHP 8.2+**. Future modernizations can target **Laravel 11+** and **Vite**:
 
 ```mermaid
 flowchart LR
-    A["Laravel 8.x<br/>(PHP 8.0/8.1)"] --> B["Laravel 9.x<br/>(Transition)"]
-    B --> C["Laravel 10.x<br/>(PHP 8.1 - 8.3)"]
-    C --> D["Laravel 11.x<br/>(PHP 8.2 - 8.4)"]
+    A["Laravel 8.x<br/>(PHP 8.0/8.1)"] --> B["Laravel 10.x<br/>(PHP 8.2 - 8.3) ✅"]
+    B --> C["Laravel 11.x<br/>(PHP 8.2 - 8.4)"]
+    C --> D["Vite Migration<br/>(Webpack Mix ➔ Vite)"]
 ```
 
-### Key Migration Checklist
+### Completed Migration Checklist (Laravel 10)
 
-| Component / Package | Current (v8) | Target (v10 / v11) | Notes & Actions |
-| :--- | :--- | :--- | :--- |
-| **PHP Runtime** | `^7.3 \| ^8.0` | `^8.2 \| ^8.3` | Upgrade hosting environment to PHP 8.2+. |
-| **`laravel/framework`** | `^8.75` | `^10.0` or `^11.0` | Follow Laravel Upgrade Guide for method return types. |
-| **`fruitcake/laravel-cors`** | `^2.0` | *Removed* | Laravel 9+ has built-in CORS middleware (`Illuminate\Http\Middleware\HandleCors`). |
-| **`facade/ignition`** | `^2.5` | `spatie/laravel-ignition: ^2.0` | `facade/ignition` is discontinued for Laravel 9+. |
-| **`barryvdh/laravel-dompdf`** | `^1.0` | `^2.0` | Update namespace calls if using deprecated methods. |
-| **`laravel/sanctum`** | `^2.11` | `^3.2` (v10) / `^4.0` (v11) | Review PersonalAccessToken tokenable relation types. |
-| **`laravel/ui`** | `^3.4` | `^4.2` | Retains Bootstrap 5 auth scaffolding on newer Laravel. |
-| **Build Tooling** | `laravel-mix` (Webpack) | `vite` + `@vitejs/plugin-vue` | Migrate from `webpack.mix.js` to `vite.config.js` for blazing-fast HMR. |
-| **Model Casts** | `$casts` array property | `casts(): array` method | Modern Laravel 11 idiomatic model attribute casting. |
+| Component / Package | Upgraded Version | Status | Notes & Actions |
+| :--- | :--- | :---: | :--- |
+| **PHP Runtime** | `^8.2` | ✅ | Compatible with PHP 8.2 and 8.3. |
+| **`laravel/framework`** | `v10.50.3` | ✅ | Modernized core framework to Laravel 10. |
+| **`fruitcake/laravel-cors`** | *Removed* | ✅ | Using Laravel built-in CORS (`Illuminate\Http\Middleware\HandleCors`). |
+| **`facade/ignition`** | `spatie/laravel-ignition: ^2.9` | ✅ | Replaced discontinued Facade Ignition with Spatie Ignition for Laravel 10. |
+| **`barryvdh/laravel-dompdf`** | `^3.1` (Dompdf 3.x) | ✅ | Resolved upstream Dompdf 2.x security advisories. |
+| **`laravel/sanctum`** | `v3.3.3` | ✅ | Upgraded to Sanctum v3. |
+| **`laravel/ui`** | `v4.6.3` | ✅ | Retains Bootstrap 5 auth scaffolding on Laravel 10. |
+| **`simplesoftwareio/simple-qrcode`** | `v4.2.0` | ✅ | Retains QR code generation on PHP 8.2. |
+| **`phpunit/phpunit`** | `v10.5.66` | ✅ | Modernized test suite to PHPUnit 10 schema `<source>`. |
 
 ---
 
