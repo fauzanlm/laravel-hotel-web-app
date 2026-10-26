@@ -5,11 +5,35 @@
 /vendor
 .env
 .env.backup
+.env.production
 .phpunit.result.cache
 docker-compose.override.yml
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+# IDE & OS files
 /.idea
 /.vscode
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Laravel Storage & Framework cache
+/storage/app/*
+!/storage/app/.gitignore
+!/storage/app/public
+/storage/framework/cache/*
+!/storage/framework/cache/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/logs/*
+!/storage/logs/.gitignore
+
+# SQLite databases
+/database/*.sqlite
+/database/*.sqlite-journal
